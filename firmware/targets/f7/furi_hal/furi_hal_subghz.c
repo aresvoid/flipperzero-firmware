@@ -331,11 +331,9 @@ uint32_t furi_hal_subghz_set_frequency_and_path(uint32_t value) {
 }
 
 uint32_t furi_hal_subghz_set_frequency(uint32_t value) {
-    if(furi_hal_region_is_frequency_allowed(value)) {
+    if(!furi_hal_region_is_frequency_allowed(value)) {
         furi_hal_subghz.regulation = SubGhzRegulationTxRx;
-    } else {
-        furi_hal_subghz.regulation = SubGhzRegulationOnlyRx;
-    }
+    } 
 
     furi_hal_spi_acquire(&furi_hal_spi_bus_handle_subghz);
     uint32_t real_frequency = cc1101_set_frequency(&furi_hal_spi_bus_handle_subghz, value);
