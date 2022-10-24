@@ -1,4 +1,10 @@
-# Flipper Zero Firmware
+# Flipper Zero Firmware TX-RX update (0.69.1 dev)
+
+Removed exception [Transmission is blocked]
+Transmission on this frequency is restricted in your region is FIXED!
+
+To build use `./fbt flash_usb` while have connected Flipper. 
+Backup all files via qFlipper before install custom firmware.
 
 [![Discord](https://img.shields.io/discord/740930220399525928.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](http://flipperzero.one/discord)
 
